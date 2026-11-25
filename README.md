@@ -43,4 +43,4 @@ ISO-Partitionen  →  SystemSetup  →  Hardening
 
 ---
 
-<sub>Die Repositories sind privat. Beispiele in der Dokumentation verwenden Platzhalter wie `mirror.example.com` oder `192.0.2.10`.</sub>
+<sub>Die Repositories sind privat. Beispiele in der Dokumentation verwenden Platzhalter wie `mirror.example.com` oder `192.0.2.10`. · [Impressum](https://chicco70.github.io/impressum.html) · [Datenschutz](https://chicco70.github.io/datenschutz.html)</sub>
