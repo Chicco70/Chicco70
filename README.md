@@ -4,6 +4,8 @@ Ich automatisiere die Einrichtung und **Härtung von Ubuntu-Systemen** mit Bash,
 
 **Plattformen:** Ubuntu 24.04 LTS und 26.04 LTS, amd64 und arm64 (u. a. NVIDIA DGX Spark)
 
+🌐 **Website:** [chicco70.github.io](https://chicco70.github.io)
+
 ---
 
 ### Projekte
