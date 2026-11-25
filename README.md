@@ -11,19 +11,19 @@ Ich automatisiere die Einrichtung und **Härtung von Ubuntu-Systemen** mit Bash,
 Die Projekte bauen aufeinander auf:
 
 ```
-94iso-partitionen  →  91SystemSetup  →  93hardening
-   Installation         Einrichtung        Härtung + Prüfung
-                             ↑
-                         92mirror
-                 interne Paketquellen
+ISO-Partitionen  →  SystemSetup  →  Hardening
+ Installation       Einrichtung     Härtung + Prüfung
+                         ↑
+                       Mirror
+                interne Paketquellen
 ```
 
 | Projekt | Worum es geht |
 |---|---|
-| **94iso-partitionen** | Ubuntu-Installer (ISO/USB-Stick) mit Autoinstall. Legt ein CIS-konformes Partitionslayout an: LUKS-Verschlüsselung, LVM, getrennte Volumes für `/var`, `/var/log`, `/tmp`, `/home` usw. mit `nodev`, `nosuid` und `noexec`. Secure Boot bleibt erhalten. |
-| **91SystemSetup** | Richtet ein frisch installiertes System ein: Hostname, Netzwerk, Paketquellen, Benutzer, Pakete, VS Code, Chromium, LM Studio und ClamAV mit geplanten Scans. Läuft auch offline mit Installationsdaten vom USB-Stick. |
-| **92mirror** | Interner Mirror-Server für Ubuntu, ClamAV-Signaturen und optional NVIDIA-, Kubernetes- und weitere Repositories. Dazu Skripte, die Clients auf den Mirror umstellen und kopierte Systeme (VM-Export/-Import) anpassen. |
-| **93hardening** | Modulares Härtungs-Framework mit 31 Modulen und vier Profilen (desktop, server, secure, kiosk): SSH, PAM, auditd, AIDE, sysctl, Mount-Optionen, fail2ban und mehr. Jede Änderung wird gesichert und kann zurückgenommen werden. Prüfung mit OpenSCAP und Lynis, Ausnahmen sind dokumentiert. |
+| **ISO-Partitionen** | Ubuntu-Installer (ISO/USB-Stick) mit Autoinstall. Legt ein CIS-konformes Partitionslayout an: LUKS-Verschlüsselung, LVM, getrennte Volumes für `/var`, `/var/log`, `/tmp`, `/home` usw. mit `nodev`, `nosuid` und `noexec`. Secure Boot bleibt erhalten. |
+| **SystemSetup** | Richtet ein frisch installiertes System ein: Hostname, Netzwerk, Paketquellen, Benutzer, Pakete, VS Code, Chromium, LM Studio und ClamAV mit geplanten Scans. Läuft auch offline mit Installationsdaten vom USB-Stick. |
+| **Mirror** | Interner Mirror-Server für Ubuntu, ClamAV-Signaturen und optional NVIDIA-, Kubernetes- und weitere Repositories. Dazu Skripte, die Clients auf den Mirror umstellen und kopierte Systeme (VM-Export/-Import) anpassen. |
+| **Hardening** | Modulares Härtungs-Framework mit 31 Modulen und vier Profilen (desktop, server, secure, kiosk): SSH, PAM, auditd, AIDE, sysctl, Mount-Optionen, fail2ban und mehr. Jede Änderung wird gesichert und kann zurückgenommen werden. Prüfung mit OpenSCAP und Lynis, Ausnahmen sind dokumentiert. |
 
 ---
 
