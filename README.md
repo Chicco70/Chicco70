@@ -22,9 +22,9 @@ ISO-Partitionen  →  SystemSetup  →  Hardening
 
 | Projekt | Worum es geht |
 |---|---|
-| **ISO-Partitionen** | Ubuntu-Installer (ISO/USB-Stick) mit Autoinstall. Legt ein CIS-konformes Partitionslayout an: LUKS-Verschlüsselung, LVM, getrennte Volumes für `/var`, `/var/log`, `/tmp`, `/home` usw. mit `nodev`, `nosuid` und `noexec`. Secure Boot bleibt erhalten. |
+| **ISO-Partitionen** | Installer-Stick mit Autoinstall für verschlüsselte Laptops (Ubuntu 26.04, LUKS2 + TPM2, Wiederherstellungsschlüssel auf dem Stick) und NVIDIA DGX Spark (DGX OS 7.4). Legt ein CIS-konformes Partitionslayout an: LVM, getrennte Volumes für `/var`, `/var/log`, `/tmp`, `/home` usw. mit `nodev`, `nosuid` und `noexec`. Bricht ab, bevor geschrieben wird, statt ein unsicheres Standardlayout zu nehmen. |
 | **SystemSetup** | Richtet ein frisch installiertes System ein: Hostname, Netzwerk, Paketquellen, Benutzer, Pakete, VS Code, Chromium, LM Studio und ClamAV mit geplanten Scans. Läuft auch offline mit Installationsdaten vom USB-Stick. |
-| **Mirror** | Interner Mirror-Server für Ubuntu, ClamAV-Signaturen und optional NVIDIA-, Kubernetes- und weitere Repositories. Dazu Skripte, die Clients auf den Mirror umstellen und kopierte Systeme (VM-Export/-Import) anpassen. |
+| **Mirror** | Interner Mirror-Server für Ubuntu, ClamAV-Signaturen und optional NVIDIA-, Kubernetes- und weitere Repositories. Dazu Skripte, die Clients auf den Mirror umstellen (Mirror wird abgefragt und gespeichert, jeder Lauf ist rücknehmbar) und kopierte Systeme (VM-Export/-Import) anpassen: Name, Netzwerk, Kennungen, Benutzer. |
 | **Hardening** | Modulares Härtungs-Framework mit 31 Modulen und vier Profilen (desktop, server, secure, kiosk): SSH, PAM, auditd, AIDE, sysctl, Mount-Optionen, fail2ban und mehr. Jede Änderung wird gesichert und kann zurückgenommen werden. Prüfung mit OpenSCAP und Lynis, Ausnahmen sind dokumentiert. |
 
 ---
